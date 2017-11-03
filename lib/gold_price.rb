@@ -3,5 +3,5 @@ require 'nokogiri'
 require 'open-uri'
 
 require_relative "./gold_price/version"
-require "./lib/cli.rb"
-require "./lib/price.rb"
+require_relative"./gold_price/cli.rb"
+require_relative "./gold_price/price.rb"
