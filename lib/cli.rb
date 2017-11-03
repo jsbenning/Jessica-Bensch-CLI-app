@@ -6,7 +6,6 @@ class GoldPrice::CLI
   def call
     puts "Welcome to Gold Price!"
     metal_menu
-    price
   end
 
   def metal_menu
@@ -32,18 +31,20 @@ class GoldPrice::CLI
       puts "Please enter a valid selection."
       measurement_menu
     end
+    price
   end
 
   def price
-    @price = GoldPrice::Price.today
+    @prices = GoldPrice::Price.prices
+    price = @prices[0]
       if @metal == 1 && @measurement == 1
-        puts "#{@price}"
+        puts "#{price.gold_by_gram}"
       elsif @metal == 1 && @measurement == 2
-        puts "The price of Gold in Ounces"
+        puts "#{price.gold_by_ounce}"
       elsif @metal == 2 && @measurement == 1
-        puts "The price of Silver in Grams"
+        puts "#{price.silver_by_gram}"
       elsif @metal == 2 && @measurement == 2
-        puts "The price of Silver in Ounces"
+        puts "#{price.silver_by_ounce}"
       end
 
 
