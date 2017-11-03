@@ -6,6 +6,7 @@ class GoldPrice::CLI
   def call
     puts "Welcome to Gold Price!"
     metal_menu
+    price
   end
 
   def metal_menu
@@ -31,7 +32,6 @@ class GoldPrice::CLI
       puts "Please enter a valid selection."
       measurement_menu
     end
-    price
   end
 
   def price
