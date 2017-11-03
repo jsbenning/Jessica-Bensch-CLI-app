@@ -51,7 +51,13 @@ class GoldPrice::CLI
     input = gets.strip.upcase
     if input == "Y" || input == "YES"
       metal_menu
+    else
+      goodbye
     end
+  end
+
+  def goodbye
+    puts "See you tomorrow! Stay Golden."
   end
 
 end
