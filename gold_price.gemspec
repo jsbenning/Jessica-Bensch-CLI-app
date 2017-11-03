@@ -6,11 +6,11 @@ require "gold_price/version"
 Gem::Specification.new do |spec|
   spec.name          = "gold_price"
   spec.version       = GoldPrice::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["<github email address>"]
+  spec.authors       = ["Jessica Bensch"]
+  spec.email         = ["jessica.bensch11@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Retrieves gold and silver prices.}
+  spec.description   = %q{Allows you to retrieve the current price of gold or silver in grams or ounces.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -32,4 +32,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
+  spec.add_dependency "nokogiri"
+
 end

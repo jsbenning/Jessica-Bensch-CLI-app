@@ -35,7 +35,7 @@ class GoldPrice::CLI
   end
 
   def price
-    @prices = GoldPrice::Price.prices
+    @prices = GoldPrice::Price.silver_prices
     price = @prices[0]
       if @metal == 1 && @measurement == 1
         puts "#{price.gold_by_gram}"
