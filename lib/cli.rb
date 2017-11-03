@@ -35,16 +35,18 @@ class GoldPrice::CLI
   end
 
   def price
-    @prices = GoldPrice::Price.silver_prices
-    price = @prices[0]
+    @silver_prices = GoldPrice::Price.silver_prices
+    @gold_prices = GoldPrice::Price.gold_prices
+    silver_price = @silver_prices[0]
+    gold_price = @gold_prices[0]
       if @metal == 1 && @measurement == 1
-        puts "#{price.gold_by_gram}"
+        puts "Today the price of gold per gram is $#{gold_price.gold_by_gram} USD."
       elsif @metal == 1 && @measurement == 2
-        puts "#{price.gold_by_ounce}"
+        puts "Today the price of gold per ounce is $#{gold_price.gold_by_ounce} USD."
       elsif @metal == 2 && @measurement == 1
-        puts "#{price.silver_by_gram}"
+        puts "Today the price of silver per gram is $#{silver_price.silver_by_gram} USD."
       elsif @metal == 2 && @measurement == 2
-        puts "#{price.silver_by_ounce}"
+        puts "Today the price of silver per ounce is $#{silver_price.silver_by_ounce} USD."
       end
 
 

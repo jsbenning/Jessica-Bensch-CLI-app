@@ -4,15 +4,19 @@ class GoldPrice::Price
 
   def self.silver_prices
     doc = Nokogiri::HTML(open("https://www.apmex.com/spotprices/silver-prices"))
-    binding.pry
-    todays_prices = self.new
-    todays_prices.gold_by_gram = "$1"
-    todays_prices.gold_by_ounce = "$2"
-    todays_prices.silver_by_gram = "$3"
-    todays_prices.silver_by_ounce = "$4"
-
-   [todays_prices]
-
+    silver_price_array = doc.css(".item-ask").text.split("$")
+    todays_silver_prices = self.new
+    todays_silver_prices.silver_by_gram = silver_price_array[2]
+    todays_silver_prices.silver_by_ounce = silver_price_array[1]
+    [todays_silver_prices]
   end
 
+  def self.gold_prices
+    doc = Nokogiri::HTML(open("https://www.apmex.com/spotprices/gold-price"))
+    gold_price_array = doc.css(".item-ask").text.split("$")
+    todays_gold_prices = self.new
+    todays_gold_prices.gold_by_gram = gold_price_array[2]
+    todays_gold_prices.gold_by_ounce = gold_price_array[1]
+    [todays_gold_prices]
+  end
 end
