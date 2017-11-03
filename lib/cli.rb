@@ -35,9 +35,9 @@ class GoldPrice::CLI
   end
 
   def price
-
+    @price = GoldPrice::Price.today
       if @metal == 1 && @measurement == 1
-        puts "The price of Gold in Grams"
+        puts "#{@price}"
       elsif @metal == 1 && @measurement == 2
         puts "The price of Gold in Ounces"
       elsif @metal == 2 && @measurement == 1

@@ -1,17 +1,13 @@
-class GoldPrice::price
+class GoldPrice::Price
 
-  attr_accessor :price_per_gram, :price_per_ounce, :price_change
+  attr_accessor :gold_by_gram, :gold_by_ounce, :silver_by_gram, :silver_by_ounce
 
-  def self.today
-    gold = self.new
-    gold.price_per_gram =
-    gold.price_per_ounce =
-    gold.price_change =
-
-    silver = self.new
-    silver.price_per_gram =
-    silver.price_per_ounce =
-    silver.price_change =
+  def self.prices
+    prices = self.new
+    prices.gold_by_gram = "$1"
+    prices.gold_by_ounce = "$2"
+    prices.silver_by_gram = "$3"
+    prices.silver_by_ounce = "$4"
 
   end
 
