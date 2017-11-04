@@ -1,6 +1,6 @@
 # GoldPrice
 
-GoldPrice will give you the current ask price for gold and silver both in grams and in ounces. 
+GoldPrice will give you the current ask price for gold and silver both in grams and in ounces.
 
 ## Installation
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/gold_price.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lilithlotus/Jessica-Bensch-CLI-app.
 
 ## License
 

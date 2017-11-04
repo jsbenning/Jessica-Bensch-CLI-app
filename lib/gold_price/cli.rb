@@ -5,11 +5,12 @@ class GoldPrice::CLI
 
   def call
     puts "Welcome to Gold Price!"
+    puts "__*__"
     metal_menu
   end
 
   def metal_menu
-    puts "Please enter the number of the metal you would like to see the price of:"
+    puts "Please enter the number of the metal you would like to see the price of and press enter:"
     puts "1. Gold"
     puts "2. Silver"
     @metal = gets.strip.to_i
@@ -22,7 +23,7 @@ class GoldPrice::CLI
   end
 
   def measurement_menu
-    puts "Please enter the number of the measurement you would like to use:"
+    puts "Please enter the number of the measurement you would like to use and press enter:"
     puts "1. Grams"
     puts "2. Ounces"
     @measurement = gets.strip.to_i
@@ -41,12 +42,16 @@ class GoldPrice::CLI
     gold_price = @gold_prices[0]
       if @metal == 1 && @measurement == 1
         puts "Today the price of gold per gram is $#{gold_price.gold_by_gram} USD."
+        puts "__*__"
       elsif @metal == 1 && @measurement == 2
         puts "Today the price of gold per ounce is $#{gold_price.gold_by_ounce} USD."
+        puts "__*__"
       elsif @metal == 2 && @measurement == 1
         puts "Today the price of silver per gram is $#{silver_price.silver_by_gram} USD."
+        puts "__*__"
       elsif @metal == 2 && @measurement == 2
         puts "Today the price of silver per ounce is $#{silver_price.silver_by_ounce} USD."
+        puts "__*__"
       end
 
 
