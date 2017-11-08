@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   #  f.match(%r{^(test|spec|features)/})
   #end
 
-  spec.executables   = "gold-price"
+  spec.executables   = ["gold-price"]
   spec.require_paths = ["lib" "lib/gold_price"]
 
   spec.add_development_dependency "bundler", "~> 1.15"
