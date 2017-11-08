@@ -1,6 +1,6 @@
 # GoldPrice
 
-GoldPrice will give you the current ask price for gold and silver both in grams and in ounces.
+GoldPrice will give you the current ask price for gold and silver both in grams and in ounces from ampex.com
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Select gold or silver in either ounces or grams to receive the most up to date ask price. 
 
 ## Development
 
