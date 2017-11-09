@@ -1,5 +1,5 @@
 # coding: utf-8
-lib = File.expand_path("../lib","/gold_price.rb")
+lib = File.expand_path("../lib","gold_price.rb")
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "gold_price/version"
 
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   #end
 
   spec.executables   = ["gold-price"]
-  spec.require_paths = ["lib", "lib/gold_price"]
+  spec.require_paths = ["lib" "lib/gold_price"]
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
