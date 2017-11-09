@@ -1,5 +1,5 @@
 # coding: utf-8
-lib = File.expand_path("../lib",(gold_price.rb))
+lib = File.expand_path("../lib")
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "gold_price/version"
 
