@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
-require_relative './lib/gold_price.rb'
+require_relative "./lib/gold_price.rb"
+require_relative "./lib/gold_price/version"
+require_relative "./lib/gold_price/cli.rb"
+require_relative "./lib/gold_price/price.rb"
 
 GoldPrice::CLI.new.call
