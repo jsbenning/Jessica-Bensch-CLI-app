@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-#require "./lib/gold_price.rb"
-Dir[File.join(".", "**/*.rb")].each { |f| require f unless f[/^\.\/spec\//]}
+require "./lib/gold_price.rb"
+require "./lib/gold_price/version.rb"
 
 
 GoldPrice::CLI.new.call
