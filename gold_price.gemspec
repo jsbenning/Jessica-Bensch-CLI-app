@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path("../lib" "gold_price.rb")
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "gold_price/version"
+require "./lib/gold_price/version.rb"
 
 Gem::Specification.new do |spec|
   spec.name          = "gold-price"
