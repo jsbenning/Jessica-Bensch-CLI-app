@@ -18,12 +18,12 @@ Gem::Specification.new do |spec|
   # to allow pushing to a single host or delete this section to allow pushing to any host.
 
 
-  #spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-  #  f.match(%r{^(test|spec|features)/})
-  #end
+  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
+  end
 
   spec.executables   = ["gold-price"]
-  spec.require_paths = ["lib" "lib/gold_price"]
+  spec.require_paths = ["lib" "lib/gold_price" "lib/gold_price.rb"]
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
