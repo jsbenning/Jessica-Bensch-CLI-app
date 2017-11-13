@@ -4,14 +4,6 @@ GoldPrice will give you the current ask price for gold and silver both in grams 
 
 ## Installation
 
-Download this file, run in terminal using ./bin/gold-price
-
-
-
-
-
-
----No functionality---
 Add this line to your application's Gemfile:
 
 ```ruby
