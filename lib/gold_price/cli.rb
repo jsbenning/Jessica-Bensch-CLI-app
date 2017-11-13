@@ -36,21 +36,20 @@ class GoldPrice::CLI
   end
 
   def price
-    @silver_prices = GoldPrice::Price.silver_prices
-    @gold_prices = GoldPrice::Price.gold_prices
-    silver_price = @silver_prices[0]
-    gold_price = @gold_prices[0]
-      if @metal == 1 && @measurement == 1
-        puts "Today the price of gold per gram is $#{gold_price.gold_by_gram} USD."
+
+    if @metal == 1
+      prices = GoldPrice::Price.prices("gold-price")
+      metal = "gold"
+    else
+      prices = GoldPrice::Price.prices("silver-prices")
+      metal = "silver"
+    end
+
+      if @measurement == 1
+        puts "Today the price of #{metal} per gram is $#{prices.by_gram} USD."
         puts "__*__"
-      elsif @metal == 1 && @measurement == 2
-        puts "Today the price of gold per ounce is $#{gold_price.gold_by_ounce} USD."
-        puts "__*__"
-      elsif @metal == 2 && @measurement == 1
-        puts "Today the price of silver per gram is $#{silver_price.silver_by_gram} USD."
-        puts "__*__"
-      elsif @metal == 2 && @measurement == 2
-        puts "Today the price of silver per ounce is $#{silver_price.silver_by_ounce} USD."
+      else
+        puts "Today the price of #{metal} per ounce is $#{prices.by_ounce} USD."
         puts "__*__"
       end
 
@@ -60,12 +59,8 @@ class GoldPrice::CLI
     if input == "Y" || input == "YES"
       metal_menu
     else
-      goodbye
+      puts "See you tomorrow! Stay Golden."
     end
-  end
-
-  def goodbye
-    puts "See you tomorrow! Stay Golden."
   end
 
 end
